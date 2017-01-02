@@ -1,4 +1,6 @@
-# Bubble sort implementation in python
+### Bubble sort implementation in Python 2.7 ###
+
+# Getting input to create an unsorted list
 print("Please enter numbers to generate a list; type 'END' when done.")
 list = []
 while True:
