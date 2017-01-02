@@ -1,16 +1,18 @@
 ### Bubble sort implementation in Python 2.7 ###
 
 # Getting input to create an unsorted list
-print("Please enter numbers to generate a list; type 'END' when done.")
-list = []
-while True:
-	input = raw_input("Input: ")
-	if input == 'END':
-		break
-	try:
-		list.append(float(input))
-	except ValueError:
-		print "Invalid input! Enter a number or type 'END'..."
+def sortInput():
+	print("Please enter numbers to generate a list; type 'END' when done.")
+	unsortedList = []
+	while True:
+		input = raw_input("Input: ")
+		if input == 'END':
+			break
+		try:
+			unsortedList.append(float(input))
+		except ValueError:
+			print "Invalid input! Enter a number or type 'END'..."
+	return(unsortedList)
 	
 # Bubble sort algorithm
 def bblsort(numList):
@@ -23,4 +25,4 @@ def bblsort(numList):
 	return(numList)
 	
 # Call bubble sort function on input list
-print "Sorted list: " + str(bblsort(list))
+print "Sorted list: " + str(bblsort(sortInput()))
